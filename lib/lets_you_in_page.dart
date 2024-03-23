@@ -1,8 +1,6 @@
-
 import 'package:flutter/material.dart';
-
-
-
+import 'package:slicing_ui/login/login_page.dart';
+import 'package:slicing_ui/login/register_page.dart';
 
 class LetsYouIn extends StatelessWidget {
   const LetsYouIn({Key? key}) : super(key: key);
@@ -11,13 +9,13 @@ class LetsYouIn extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: EdgeInsets.only(bottom: 30), // Adjust the padding as needed
+        padding: EdgeInsets.only(bottom: 30),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween, // This will space out the column's children evenly.
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
             Padding(
-              padding: EdgeInsets.only(top: 300), // Adjust the padding as needed
+              padding: EdgeInsets.only(top: 300),
               child: Text(
                 "Let's you in",
                 textAlign: TextAlign.center,
@@ -31,10 +29,10 @@ class LetsYouIn extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                SizedBox(
+                Image.asset(
+                  'assets/images/google.png',
                   width: 48,
                   height: 48,
-                  child: Image.asset('assets/images/google.png'),
                 ),
                 SizedBox(
                   width: 172,
@@ -55,14 +53,14 @@ class LetsYouIn extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                SizedBox(
+                Image.asset(
+                  'assets/images/apple.png',
                   width: 48,
                   height: 48,
-                  child: Image.asset('images/apple.png'),
                 ),
                 SizedBox(
                   width: 172,
-                  height: 20,
+                  height: 22,
                   child: Text(
                     "Continue with Apple",
                     style: TextStyle(
@@ -86,59 +84,84 @@ class LetsYouIn extends StatelessWidget {
               ),
             ),
             SizedBox(height: 10),
-            // Custom Sign In Button
             InkWell(
               onTap: () {
-                // Action when button is pressed
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => LoginPage()), // Ganti dengan halaman yang sesuai
+                );
               },
-              child: Container(
-                height: 60,
-                decoration: BoxDecoration(
-                  color: Color(0xFF0961F5),
-                  borderRadius: BorderRadius.circular(30),
-                ),
-                child: Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 20),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: <Widget>[
-                      Text(
-                        'Sign In with Your Account',
-                        style: TextStyle(
-                          fontSize: 16,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.white,
-                          fontFamily: 'Jost',
-                        ),
-                      ),
-                      Container(
-                        decoration: BoxDecoration(
-                          shape: BoxShape.circle,
-                          color: Colors.white,
-                        ),
-                        child: Padding(
-                          padding: EdgeInsets.all(4), // Padding inside the circle
-                          child: Icon(
-                            Icons.arrow_forward,
-                            color: Color(0xFF0961F5),
-                            size: 24,
+              child: Padding(
+                padding: const EdgeInsets.only(left: 25, right: 25),
+                child: Container(
+                  height: 60,
+                  width: 20,
+                  decoration: BoxDecoration(
+                    color: Color(0xFF0961F5),
+                    borderRadius: BorderRadius.circular(30),
+                  ),
+                  child: Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 20),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: <Widget>[
+                        Text(
+                          'Sign In with Your Account',
+                          style: TextStyle(
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white,
+                            fontFamily: 'Jost',
                           ),
                         ),
-                      ),
-                    ],
+                        Container(
+                          decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            color: Colors.white,
+                          ),
+                          child: Padding(
+                            padding: const EdgeInsets.all(10),
+                            child: Icon(
+                              Icons.arrow_forward,
+                              color: Color(0xFF0961F5),
+                              size: 24,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               ),
             ),
-            TextButton(
-              onPressed: () {
-                // Action when button is pressed
+            SizedBox(height: 10),
+            // RichText for customizing text with different styles
+            InkWell(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => RegisterPage()), // Ganti dengan halaman yang sesuai
+                );
               },
-              child: Text(
-                'Dont have an Account? SIGN UP',
-                style: TextStyle(
-                  color: Color(0xFF0961F5),
-                  fontWeight: FontWeight.bold,
+              child: RichText(
+                textAlign: TextAlign.center,
+                text: TextSpan(
+                  style: TextStyle(
+                    color: Color(0xFF545454), // Default color for text
+                    fontFamily: 'Mulish',
+                    fontSize: 16,
+                    fontWeight: FontWeight.bold,
+                  ),
+                  children: [
+                    TextSpan(text: "Don't have an account? "),
+                    TextSpan(
+                      text: "Sign Up",
+                      style: TextStyle(
+                        color: Color(0xFF0961F5), // Color for "Sign Up"
+                        decoration: TextDecoration.underline, // Underline for "Sign Up"
+                      ),
+                    ),
+                  ],
                 ),
               ),
             ),

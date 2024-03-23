@@ -45,7 +45,7 @@ class Intro02 extends StatelessWidget {
               children: [
                 Text(
                   "Skip",
-                  textAlign: TextAlign.end, // Mengatur teks menjadi rata kanan
+                  textAlign: TextAlign.end,
                   style: TextStyle(
                     fontFamily: 'Jost',
                     fontSize: 16,
@@ -86,7 +86,6 @@ class Intro02 extends StatelessWidget {
             left: 16,
             child: Row(
               children: [
-
                 Container(
                   margin: EdgeInsets.only(right: 8),
                   width: 10,
@@ -102,7 +101,7 @@ class Intro02 extends StatelessWidget {
                   height: 10,
                   decoration: BoxDecoration(
                     shape: BoxShape.rectangle,
-                    borderRadius: borderRadius, // Menggunakan objek BorderRadius.circular yang telah diinisialisasi
+                    borderRadius: borderRadius,
                     color: Colors.blue,
                   ),
                 ),

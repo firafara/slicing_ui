@@ -6,7 +6,7 @@ class Intro01 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var borderRadius = BorderRadius.circular(4); // Menginisialisasi objek BorderRadius.circular dengan radius 4
+    var borderRadius = BorderRadius.circular(4);
     return Scaffold(
       backgroundColor: Color(0xFFF5F9FF),
       body: Stack(
@@ -25,10 +25,10 @@ class Intro01 extends StatelessWidget {
                   ),
                 ),
                 SizedBox(height: 10),
-                Center( // Menambahkan Center di sekitar teks agar menjadi rata tengah
+                Center(
                   child: Text(
                     "We Provide Classes Online Classes and Pre Recorded \nLectures.!",
-                    textAlign: TextAlign.center, // Mengatur teks menjadi rata tengah
+                    textAlign: TextAlign.center,
                     style: TextStyle(
                       fontFamily: 'Mulish',
                       fontSize: 14,
@@ -48,7 +48,7 @@ class Intro01 extends StatelessWidget {
               children: [
                 Text(
                   "Skip",
-                  textAlign: TextAlign.end, // Mengatur teks menjadi rata kanan
+                  textAlign: TextAlign.end,
                   style: TextStyle(
                     fontFamily: 'Jost',
                     fontSize: 16,
@@ -64,7 +64,6 @@ class Intro01 extends StatelessWidget {
             right: 16,
             child: GestureDetector(
               onTap: () {
-                // Handle back button action
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => Intro02()),
@@ -96,7 +95,7 @@ class Intro01 extends StatelessWidget {
                   height: 10,
                   decoration: BoxDecoration(
                     shape: BoxShape.rectangle,
-                    borderRadius: borderRadius, // Menggunakan objek BorderRadius.circular yang telah diinisialisasi
+                    borderRadius: borderRadius,
                     color: Colors.blue,
                   ),
                 ),

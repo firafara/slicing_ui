@@ -67,7 +67,6 @@ class _WelcomePageState extends State<WelcomePage> {
                     height: 158,
                   ),
                 ),
-                // ... Add more images if needed
               ],
             ),
           ),

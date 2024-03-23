@@ -6,7 +6,7 @@ class Intro03 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var borderRadius = BorderRadius.circular(4); // Menginisialisasi objek BorderRadius.circular dengan radius 4
+    var borderRadius = BorderRadius.circular(4);
     return Scaffold(
       backgroundColor: Color(0xFFF5F9FF),
       body: Stack(
@@ -45,7 +45,7 @@ class Intro03 extends StatelessWidget {
               children: [
                 Text(
                   "Skip",
-                  textAlign: TextAlign.end, // Mengatur teks menjadi rata kanan
+                  textAlign: TextAlign.end,
                   style: TextStyle(
                     fontFamily: 'Jost',
                     fontSize: 16,
@@ -58,7 +58,7 @@ class Intro03 extends StatelessWidget {
           ),
           Positioned(
             bottom: 20,
-            right: 16, // Position the button to the right
+            right: 16,
             child: GestureDetector(
               onTap: () {
                 Navigator.push(
@@ -67,10 +67,10 @@ class Intro03 extends StatelessWidget {
                 );
               },
               child: Container(
-                width: 200, // Set the width to 200
-                height: 60, // Set the height to 60
+                width: 200,
+                height: 60,
                 decoration: BoxDecoration(
-                  color: Color(0xFF0961F5), // Solid color applied here
+                  color: Color(0xFF0961F5),
                   borderRadius: BorderRadius.circular(30),
                   boxShadow: [
                     BoxShadow(
@@ -103,14 +103,14 @@ class Intro03 extends StatelessWidget {
                       child: Padding(
                         padding: const EdgeInsets.only(right: 16),
                         child: Container(
-                          padding: const EdgeInsets.all(10), // Padding inside the circle
+                          padding: const EdgeInsets.all(10),
                           decoration: BoxDecoration(
                             shape: BoxShape.circle,
                             color: Colors.white,
                           ),
                           child: Icon(
                             Icons.arrow_forward,
-                            color: Color(0xFF0961F5), // The icon color matches the container
+                            color: Color(0xFF0961F5),
                             size: 24,
                           ),
                         ),
@@ -122,15 +122,11 @@ class Intro03 extends StatelessWidget {
             ),
           ),
 
-
-
-
           Positioned(
             bottom: 20,
             left: 16,
             child: Row(
               children: [
-
                 Container(
                   margin: EdgeInsets.only(right: 8),
                   width: 10,
@@ -140,7 +136,6 @@ class Intro03 extends StatelessWidget {
                     color: Colors.grey,
                   ),
                 ),
-
                 Container(
                   margin: EdgeInsets.only(right: 8),
                   width: 10,
@@ -156,14 +151,13 @@ class Intro03 extends StatelessWidget {
                   height: 10,
                   decoration: BoxDecoration(
                     shape: BoxShape.rectangle,
-                    borderRadius: borderRadius, // Menggunakan objek BorderRadius.circular yang telah diinisialisasi
+                    borderRadius: borderRadius,
                     color: Colors.blue,
                   ),
                 ),
               ],
             ),
           ),
-
         ],
       ),
     );
