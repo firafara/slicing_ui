@@ -2,6 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:slicing_ui/login/register_page.dart';
 import 'package:slicing_ui/profile/fill_profile_page.dart';
 
+import '../notification_page.dart';
+import '../invitedFriendPage.dart';
+import '../termConditionPage.dart';
+
 class LoginPage extends StatelessWidget {
   TextEditingController txtEmail = TextEditingController();
   TextEditingController txtPassword = TextEditingController();
