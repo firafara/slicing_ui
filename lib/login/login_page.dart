@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:slicing_ui/login/register_page.dart';
+import 'package:slicing_ui/password/forgot_password.dart';
 import 'package:slicing_ui/profile/fill_profile_page.dart';
 
 class LoginPage extends StatelessWidget {
@@ -127,13 +128,12 @@ class LoginPage extends StatelessWidget {
                   ),
                   TextButton(
                     onPressed: () {
-                      // Navigasi ke halaman lupa password saat teks ditekan
-                      // Navigator.push(
-                      //   context,
-                      //   MaterialPageRoute(
-                      //       builder: (context) =>
-                      //           ForgotPassword()), // Ganti dengan halaman yang sesuai
-                      //   );
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) =>
+                                ForgotPassword()), // Ganti dengan halaman yang sesuai
+                        );
                     },
                     child: Text(
                       'Forgot Password?',
