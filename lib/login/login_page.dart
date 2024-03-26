@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:slicing_ui/category/category.dart';
+import 'package:slicing_ui/category/search.dart';
+import 'package:slicing_ui/course/popular_course.dart';
+import 'package:slicing_ui/home_page.dart';
 import 'package:slicing_ui/login/register_page.dart';
+import 'package:slicing_ui/notification_profile.dart';
 import 'package:slicing_ui/password/forgot_password.dart';
 import 'package:slicing_ui/profile/fill_profile_page.dart';
-
-import '../notification_page.dart';
-import '../invitedFriendPage.dart';
-import '../termConditionPage.dart';
 
 class LoginPage extends StatelessWidget {
   TextEditingController txtEmail = TextEditingController();
@@ -156,9 +157,18 @@ class LoginPage extends StatelessWidget {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(
-                        builder: (context) => FillProfile()), // Ganti dengan halaman yang sesuai
-                    );
+                    // MaterialPageRoute(
+                    //     builder: (context) => FillProfile()),
+                    // );
+                        //   MaterialPageRoute(
+                        //       builder: (context) => Category()),
+                        // );
+                        // MaterialPageRoute(
+                        //     builder: (context) => Search()),
+                        //
+                        MaterialPageRoute(
+                            builder: (context) => NotificationProfile()),
+                        );
                 },
                 child: Container(
                   height: 60,
