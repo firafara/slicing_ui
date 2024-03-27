@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:slicing_ui/category/category.dart';
 import 'package:slicing_ui/category/search.dart';
+import 'package:slicing_ui/course/course_list_filter.dart';
 import 'package:slicing_ui/course/popular_course.dart';
 import 'package:slicing_ui/home_page.dart';
 import 'package:slicing_ui/login/register_page.dart';
@@ -157,18 +158,12 @@ class LoginPage extends StatelessWidget {
                 onTap: () {
                   Navigator.push(
                     context,
-                    // MaterialPageRoute(
-                    //     builder: (context) => FillProfile()),
-                    // );
-                        //   MaterialPageRoute(
-                        //       builder: (context) => Category()),
-                        // );
                         // MaterialPageRoute(
-                        //     builder: (context) => Search()),
-                        //
+                        //     builder: (context) => FillProfile()),
+                        // );
                         MaterialPageRoute(
-                            builder: (context) => NotificationProfile()),
-                        );
+                            builder: (context) => CourseListFilter()),
+                      );
                 },
                 child: Container(
                   height: 60,

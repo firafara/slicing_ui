@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:slicing_ui/category/search.dart';
 
 class Category extends StatefulWidget {
   const Category({Key? key}) : super(key: key);
@@ -31,6 +32,11 @@ class _CategoryState extends State<Category> {
             _SearchOnly(
               hintText: "Search For...",
               onChanged: (String value) {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => Search()),
+                  );
               },
             ),
             SizedBox(height: 5),

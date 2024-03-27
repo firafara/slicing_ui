@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:slicing_ui/category/search.dart';
 import 'package:slicing_ui/intro02_page.dart';
+import 'package:slicing_ui/notification_profile.dart';
 
 class Intro01 extends StatelessWidget {
   const Intro01({super.key});
@@ -67,6 +69,9 @@ class Intro01 extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => Intro02()),
+                  // MaterialPageRoute(builder: (context) => Search()),
+                  // MaterialPageRoute(builder: (context) => NotificationProfile()),
+
                 );
               },
               child: Container(
