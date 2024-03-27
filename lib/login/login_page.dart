@@ -7,6 +7,7 @@ import 'package:slicing_ui/home_page.dart';
 import 'package:slicing_ui/login/register_page.dart';
 import 'package:slicing_ui/notification_profile.dart';
 import 'package:slicing_ui/password/forgot_password.dart';
+import 'package:slicing_ui/paymentOptionPage.dart';
 import 'package:slicing_ui/profile/fill_profile_page.dart';
 
 class LoginPage extends StatelessWidget {
