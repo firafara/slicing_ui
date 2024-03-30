@@ -80,6 +80,10 @@ flutter:
    - assets/images/category5.png
    - assets/images/category6.png
    - assets/images/category7.png
+   - assets/images/course.png
+   - assets/images/bookmark.png
+   - assets/images/blankuser.png
+   - assets/images/wiliam.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

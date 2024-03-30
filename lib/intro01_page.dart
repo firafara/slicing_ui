@@ -1,7 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:slicing_ui/category/search.dart';
+import 'package:slicing_ui/course/course_list.dart';
+import 'package:slicing_ui/course/detail_course.dart';
+import 'package:slicing_ui/course/popular_course.dart';
+import 'package:slicing_ui/home_page.dart';
 import 'package:slicing_ui/intro02_page.dart';
+import 'package:slicing_ui/mentor/top_mentor.dart';
+import 'package:slicing_ui/model/model_course.dart';
 import 'package:slicing_ui/notification_profile.dart';
+import 'package:slicing_ui/paymentOptionPage.dart';
 
 class Intro01 extends StatelessWidget {
   const Intro01({super.key});
@@ -65,13 +72,26 @@ class Intro01 extends StatelessWidget {
             bottom: 20,
             right: 16,
             child: GestureDetector(
+              // onTap: () {
+              //   Navigator.push(
+              //     context,
+              //     // MaterialPageRoute(builder: (context) => Intro02()),
+              //     // MaterialPageRoute(builder: (context) => Search()),
+              //     // MaterialPageRoute(builder: (context) => NotificationProfile()),
+              //     // MaterialPageRoute(builder: (context) => CourseList()),
+              //     MaterialPageRoute(builder: (context) => DetailCourse()),
+              //
+              //   );
+              // },
               onTap: () {
+                // Get the first course from the list as an example.
+                Course selectedCourse = courses[0]; // Replace '0' with the index of the course you want to display.
+
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => Intro02()),
-                  // MaterialPageRoute(builder: (context) => Search()),
-                  // MaterialPageRoute(builder: (context) => NotificationProfile()),
-
+                  MaterialPageRoute(
+                    builder: (context) => DetailCourse(course: selectedCourse),
+                  ),
                 );
               },
               child: Container(

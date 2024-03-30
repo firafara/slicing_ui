@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:slicing_ui/security.dart';
 import 'package:slicing_ui/widget/custom_button.dart';
 
 class PaymentOptionPage extends StatefulWidget {
@@ -200,12 +201,12 @@ class _PaymentOptionPageState extends State<PaymentOptionPage> {
                   CustomButton(
                     text: 'Add New Card',
                     onPressed: () {
-                      // Navigator.push(
-                      // context,
-                      // MaterialPageRoute(
-                      //     builder: (context) =>
-                      //         AddNewCardPage()), // Ganti dengan halaman yang sesuai
-                      // );
+                      Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) =>
+                              SecurityPage()),
+                      );
                     },
                   ),
                 ]),

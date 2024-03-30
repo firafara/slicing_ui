@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:slicing_ui/languagePage.dart';
 import 'package:slicing_ui/widget/custom_button.dart';
 import 'package:slicing_ui/widget/custom_buttonPolos.dart';
 import 'package:slicing_ui/widget/custom_swichbutton.dart';
@@ -80,8 +81,12 @@ class _SecurityPageState extends State<SecurityPage> {
             CustomButton(
               text: "Change Password",
               onPressed: () {
-                // Navigasi ke halaman untuk mengubah password
-                // Navigator.push(context, MaterialPageRoute(builder: (context) => ChangePasswordPage()));
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) =>
+                          LanguagePage()),
+                );
               },
             ),
           ],
