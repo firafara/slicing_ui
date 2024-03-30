@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:slicing_ui/category/search.dart';
 import 'package:slicing_ui/course/course_list.dart';
 import 'package:slicing_ui/course/detail_course.dart';
+import 'package:slicing_ui/course/detail_course_curriculum.dart';
 import 'package:slicing_ui/course/popular_course.dart';
 import 'package:slicing_ui/home_page.dart';
 import 'package:slicing_ui/intro02_page.dart';
@@ -83,6 +84,17 @@ class Intro01 extends StatelessWidget {
               //
               //   );
               // },
+              // onTap: () {
+              //   // Get the first course from the list as an example.
+              //   Course selectedCourse = courses[0]; // Replace '0' with the index of the course you want to display.
+              //
+              //   Navigator.push(
+              //     context,
+              //     MaterialPageRoute(
+              //       builder: (context) => DetailCourse(course: selectedCourse),
+              //     ),
+              //   );
+              // },
               onTap: () {
                 // Get the first course from the list as an example.
                 Course selectedCourse = courses[0]; // Replace '0' with the index of the course you want to display.
@@ -90,7 +102,7 @@ class Intro01 extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => DetailCourse(course: selectedCourse),
+                    builder: (context) => DetailCourseCurriculum(course: selectedCourse),
                   ),
                 );
               },
