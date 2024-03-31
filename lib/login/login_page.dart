@@ -163,7 +163,7 @@ class LoginPage extends StatelessWidget {
                         //     builder: (context) => FillProfile()),
                         // );
                         MaterialPageRoute(
-                            builder: (context) => CourseListFilter()),
+                            builder: (context) => HomePage()),
                       );
                 },
                 child: Container(

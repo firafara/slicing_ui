@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:slicing_ui/mentor/mentor_detail.dart';
+import 'package:slicing_ui/mentor/mentor_list.dart';
 import 'package:slicing_ui/widget/widget_mentor.dart';
 
 import '../model/model_mentor.dart';
@@ -35,7 +37,10 @@ class _TopMentorState extends State<TopMentor> {
           IconButton(
             icon: Icon(Icons.search),
             onPressed: () {
-              // Implement search functionality
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => MentorList()),
+                );
             },
           ),
         ],

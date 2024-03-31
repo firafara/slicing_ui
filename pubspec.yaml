@@ -84,6 +84,7 @@ flutter:
    - assets/images/bookmark.png
    - assets/images/blankuser.png
    - assets/images/wiliam.png
+   - assets/images/homeCourse.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

@@ -73,17 +73,16 @@ class Intro01 extends StatelessWidget {
             bottom: 20,
             right: 16,
             child: GestureDetector(
-              // onTap: () {
-              //   Navigator.push(
-              //     context,
-              //     // MaterialPageRoute(builder: (context) => Intro02()),
-              //     // MaterialPageRoute(builder: (context) => Search()),
-              //     // MaterialPageRoute(builder: (context) => NotificationProfile()),
-              //     // MaterialPageRoute(builder: (context) => CourseList()),
-              //     MaterialPageRoute(builder: (context) => DetailCourse()),
-              //
-              //   );
-              // },
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Intro02()),
+                  // MaterialPageRoute(builder: (context) => Search()),
+                  // MaterialPageRoute(builder: (context) => NotificationProfile()),
+                  // MaterialPageRoute(builder: (context) => CourseList()),
+                  // MaterialPageRoute(builder: (context) => DetailCourse()),
+                );
+              },
               // onTap: () {
               //   // Get the first course from the list as an example.
               //   Course selectedCourse = courses[0]; // Replace '0' with the index of the course you want to display.
@@ -95,17 +94,17 @@ class Intro01 extends StatelessWidget {
               //     ),
               //   );
               // },
-              onTap: () {
-                // Get the first course from the list as an example.
-                Course selectedCourse = courses[0]; // Replace '0' with the index of the course you want to display.
-
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => DetailCourseCurriculum(course: selectedCourse),
-                  ),
-                );
-              },
+              // onTap: () {
+              //   // Get the first course from the list as an example.
+              //   Course selectedCourse = courses[0]; // Replace '0' with the index of the course you want to display.
+              //
+              //   Navigator.push(
+              //     context,
+              //     MaterialPageRoute(
+              //       builder: (context) => DetailCourseCurriculum(course: selectedCourse),
+              //     ),
+              //   );
+              // },
               child: Container(
                 width: 60,
                 height: 60,

@@ -3,6 +3,7 @@ import 'package:slicing_ui/model/model_course.dart';
 import 'package:slicing_ui/model/model_mentor.dart';
 import 'package:slicing_ui/widget/ReviewWidget.dart';
 import 'package:slicing_ui/widget/widget_mentor.dart';
+import 'package:slicing_ui/widget/widget_section.dart';
 
 class DetailCourse extends StatefulWidget {
   final Course course;
@@ -173,14 +174,7 @@ class _DetailCourseState extends State<DetailCourse> with SingleTickerProviderSt
                                     ),
                                   ),
                                 ),
-
-                                SingleChildScrollView(
-                                  padding: EdgeInsets.all(16.0),
-                                  child: Text(
-                                    'Curriculum content goes here...',
-                                    // Content for the 'Curriculum' tab
-                                  ),
-                                ),
+                                CourseSectionWidget(),
                               ],
                             ),
                           ),
