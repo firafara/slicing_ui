@@ -73,12 +73,15 @@ class LoginPage extends StatelessWidget {
                   filled: true,
                   fillColor: Colors.white,
                   hintText: "Email",
-                  prefixIcon: Icon(Icons.mail_outline, color: Color(0xFF545454)), // Changed to prefixIcon and added icon color
+                  prefixIcon:
+                      Icon(Icons.mail_outline, color: Color(0xFF545454)),
+                  // Changed to prefixIcon and added icon color
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(8.0),
                     borderSide: BorderSide.none,
                   ),
-                  contentPadding: EdgeInsets.symmetric(vertical: 0), // Adjust padding as needed
+                  contentPadding: EdgeInsets.symmetric(
+                      vertical: 0), // Adjust padding as needed
                 ),
                 controller: txtEmail,
               ),
@@ -91,13 +94,18 @@ class LoginPage extends StatelessWidget {
                   filled: true,
                   fillColor: Colors.white,
                   hintText: "Password",
-                  prefixIcon: Icon(Icons.lock_outline, color: Color(0xFF545454)), // Changed to prefixIcon and added icon color
+                  prefixIcon:
+                      Icon(Icons.lock_outline, color: Color(0xFF545454)),
+                  // Changed to prefixIcon and added icon color
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(8.0),
                     borderSide: BorderSide.none,
                   ),
-                  suffixIcon: Icon(Icons.visibility_off, color: Color(0xFF545454)), // Added icon color
-                  contentPadding: EdgeInsets.symmetric(vertical: 0), // Adjust padding as needed
+                  suffixIcon:
+                      Icon(Icons.visibility_off, color: Color(0xFF545454)),
+                  // Added icon color
+                  contentPadding: EdgeInsets.symmetric(
+                      vertical: 0), // Adjust padding as needed
                 ),
                 controller: txtPassword,
                 obscureText: true,
@@ -109,26 +117,40 @@ class LoginPage extends StatelessWidget {
                 children: [
                   Row(
                     children: [
-                      Theme(
-                        data: ThemeData(
-                          checkboxTheme: CheckboxThemeData(
-                            side: BorderSide(color: Color(0xFF167F71), width: 2.0),
-                          ),
-                        ),
-                        child: Checkbox(
-                          value: false,
-                          onChanged: (bool? value) {
-                            // Fungsi ketika nilai checkbox berubah
-                          },
-                        ),
-                      ),
-                      Text(
-                        'Remember Me',
-                        style: TextStyle(
-                          color: Color(0xFF545454),
-                          fontFamily: 'Mulish',
-                          fontSize: 13,
-                          fontWeight: FontWeight.bold,
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => FillProfile()),
+                          );
+                        },
+                        child: Row(
+                          children: [
+                            Theme(
+                              data: ThemeData(
+                                checkboxTheme: CheckboxThemeData(
+                                  side: BorderSide(
+                                      color: Color(0xFF167F71), width: 2.0),
+                                ),
+                              ),
+                              child: Checkbox(
+                                value: false,
+                                onChanged: (bool? value) {
+                                  // Fungsi ketika nilai checkbox berubah
+                                },
+                              ),
+                            ),
+                            Text(
+                              'Remember Me',
+                              style: TextStyle(
+                                color: Color(0xFF545454),
+                                fontFamily: 'Mulish',
+                                fontSize: 13,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ],
                         ),
                       ),
                     ],
@@ -140,7 +162,7 @@ class LoginPage extends StatelessWidget {
                         MaterialPageRoute(
                             builder: (context) =>
                                 ForgotPassword()), // Ganti dengan halaman yang sesuai
-                        );
+                      );
                     },
                     child: Text(
                       'Forgot Password?',
@@ -159,12 +181,11 @@ class LoginPage extends StatelessWidget {
                 onTap: () {
                   Navigator.push(
                     context,
-                        // MaterialPageRoute(
-                        //     builder: (context) => FillProfile()),
-                        // );
-                        MaterialPageRoute(
-                            builder: (context) => HomePage()),
-                      );
+                    // MaterialPageRoute(
+                    //     builder: (context) => FillProfile()),
+                    // );
+                    MaterialPageRoute(builder: (context) => HomePage()),
+                  );
                 },
                 child: Container(
                   height: 60,
@@ -248,7 +269,9 @@ class LoginPage extends StatelessWidget {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => RegisterPage()), // Ganti dengan halaman yang sesuai
+                    MaterialPageRoute(
+                        builder: (context) =>
+                            RegisterPage()), // Ganti dengan halaman yang sesuai
                   );
                 },
                 child: Container(
@@ -268,7 +291,8 @@ class LoginPage extends StatelessWidget {
                           text: "SIGN UP",
                           style: TextStyle(
                             color: Color(0xFF0961F5), // Color for "Sign Up"
-                            decoration: TextDecoration.underline, // Underline for "Sign Up"
+                            decoration: TextDecoration
+                                .underline, // Underline for "Sign Up"
                           ),
                         ),
                       ],

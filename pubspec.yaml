@@ -67,6 +67,8 @@ flutter:
    - assets/images/oval.png
    - assets/images/logo_login.png
    - assets/images/agree.png
+   - assets/images/receipt.png
+   - assets/images/barcode.png
    - assets/images/ic_congratulation.png
    - assets/images/congratulation_password.png
    - assets/images/loading.png

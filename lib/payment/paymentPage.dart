@@ -3,11 +3,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:slicing_ui/home_page.dart';
 
-import '../model/model_course.dart';
-import '../widget/custom_button.dart';
-import '../widget/custom_dialog.dart';
-import '../widget/custom_radiobutton.dart';
+import '../../model/model_course.dart';
+import '../../widget/custom_button.dart';
+import '../../widget/custom_dialog.dart';
+import '../../widget/custom_radiobutton.dart';
 import '/profile/addNewCardPage.dart';
+import 'e-ReceiptPage.dart';
 
 class PaymentPage extends StatefulWidget {
   final Course course;
@@ -64,7 +65,7 @@ class _PaymentPageState extends State<PaymentPage> {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => HomePage()),
+                    MaterialPageRoute(builder: (context) => EReceiptPage(course: course)),
                   );
                 },
                 child: Text("E-Receipt"),

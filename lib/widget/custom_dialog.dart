@@ -5,7 +5,7 @@ import 'package:flutter/widgets.dart';
 // import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:slicing_ui/widget/custom_button.dart';
 // import 'package:slicing_ui/widget/pageBottomBar.dart';
-import '../paymentPage.dart';
+import '../payment/paymentPage.dart';
 
 class CustomDialog {
   static var RatingBar;
