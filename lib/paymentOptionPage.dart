@@ -4,6 +4,8 @@ import 'package:flutter/widgets.dart';
 import 'package:slicing_ui/security.dart';
 import 'package:slicing_ui/widget/custom_button.dart';
 
+import 'addNewCardPage.dart';
+
 class PaymentOptionPage extends StatefulWidget {
   @override
   State<PaymentOptionPage> createState() => _PaymentOptionPageState();
@@ -205,7 +207,7 @@ class _PaymentOptionPageState extends State<PaymentOptionPage> {
                       context,
                       MaterialPageRoute(
                           builder: (context) =>
-                              SecurityPage()),
+                              AddNewCardPage()),
                       );
                     },
                   ),

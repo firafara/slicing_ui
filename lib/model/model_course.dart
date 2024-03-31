@@ -25,7 +25,7 @@ class Course {
 
 List<Course> courses = [
   Course(
-    urlImage: 'https://s3.amazonaws.com/coursesity-blog/2021/06/3D-ANIMATION-_App_Classes.png',
+    urlImage: 'assets/images/course.png',
     txtCategori: 'Graphic Design',
     txtTitle: 'Graphic Design Advanced',
     txtPrice: '20',
