@@ -109,26 +109,38 @@ class LoginPage extends StatelessWidget {
                 children: [
                   Row(
                     children: [
-                      Theme(
-                        data: ThemeData(
-                          checkboxTheme: CheckboxThemeData(
-                            side: BorderSide(color: Color(0xFF167F71), width: 2.0),
-                          ),
-                        ),
-                        child: Checkbox(
-                          value: false,
-                          onChanged: (bool? value) {
-                            // Fungsi ketika nilai checkbox berubah
-                          },
-                        ),
-                      ),
-                      Text(
-                        'Remember Me',
-                        style: TextStyle(
-                          color: Color(0xFF545454),
-                          fontFamily: 'Mulish',
-                          fontSize: 13,
-                          fontWeight: FontWeight.bold,
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => FillProfile()),
+                          );
+                        },
+                        child: Row(
+                          children: [
+                            Theme(
+                              data: ThemeData(
+                                checkboxTheme: CheckboxThemeData(
+                                  side: BorderSide(color: Color(0xFF167F71), width: 2.0),
+                                ),
+                              ),
+                              child: Checkbox(
+                                value: false,
+                                onChanged: (bool? value) {
+                                  // Fungsi ketika nilai checkbox berubah
+                                },
+                              ),
+                            ),
+                            Text(
+                              'Remember Me',
+                              style: TextStyle(
+                                color: Color(0xFF545454),
+                                fontFamily: 'Mulish',
+                                fontSize: 13,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ],
                         ),
                       ),
                     ],
