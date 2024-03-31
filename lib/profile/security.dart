@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:slicing_ui/languagePage.dart';
+import 'package:slicing_ui/profile/languagePage.dart';
 import 'package:slicing_ui/widget/custom_button.dart';
 import 'package:slicing_ui/widget/custom_buttonPolos.dart';
 import 'package:slicing_ui/widget/custom_swichbutton.dart';

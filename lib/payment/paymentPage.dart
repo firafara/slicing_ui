@@ -3,11 +3,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:slicing_ui/home_page.dart';
 
-import '../model/model_course.dart';
-import '../widget/custom_button.dart';
-import '../widget/custom_dialog.dart';
-import '../widget/custom_radiobutton.dart';
-import 'addNewCardPage.dart';
+import '../../model/model_course.dart';
+import '../../widget/custom_button.dart';
+import '../../widget/custom_dialog.dart';
+import '../../widget/custom_radiobutton.dart';
+import '/profile/addNewCardPage.dart';
+import 'e-ReceiptPage.dart';
 
 class PaymentPage extends StatefulWidget {
   final Course course;
@@ -55,7 +56,7 @@ class _PaymentPageState extends State<PaymentPage> {
               ),
               SizedBox(height: 20),
               Text(
-                "Your Account is Ready to Use. You will be redirected to the Home Page in a Few Seconds.",
+                "Your Payment is Successfully. Purchase a New Course",
                 style: TextStyle(fontFamily: 'Mulish'),
                 textAlign: TextAlign.center,
               ),
@@ -64,10 +65,10 @@ class _PaymentPageState extends State<PaymentPage> {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => HomePage()),
+                    MaterialPageRoute(builder: (context) => EReceiptPage(course: course)),
                   );
                 },
-                child: Text("Enroll Course - \u0024${course.txtPrice}"),
+                child: Text("E-Receipt"),
               )
             ],
           ),
