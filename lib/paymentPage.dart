@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:slicing_ui/home_page.dart';
 
 import '../model/model_course.dart';
 import '../widget/custom_button.dart';
@@ -59,16 +60,14 @@ class _PaymentPageState extends State<PaymentPage> {
                 textAlign: TextAlign.center,
               ),
               SizedBox(height: 20),
-              CustomButton(
+              ElevatedButton(
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(
-                      builder: (context) => PaymentPage(course: course),
-                    ),
+                    MaterialPageRoute(builder: (context) => HomePage()),
                   );
                 },
-                text: "Enroll Course - \u0024${course.txtPrice}",
+                child: Text("Enroll Course - \u0024${course.txtPrice}"),
               )
             ],
           ),
@@ -76,6 +75,8 @@ class _PaymentPageState extends State<PaymentPage> {
       },
     );
   }
+
+
 
   @override
   Widget build(BuildContext context) {

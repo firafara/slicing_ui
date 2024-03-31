@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:slicing_ui/category/category.dart';
 import 'package:slicing_ui/course/detail_course.dart';
 import 'package:slicing_ui/course/popular_course.dart';
 import 'package:slicing_ui/mentor/mentor_detail.dart';
@@ -118,7 +119,13 @@ class _HomePageState extends State<HomePage> {
                           ),
                           Positioned(
                             right: 0,
-                            child: GestureDetector(
+                            child:  GestureDetector(
+                              onTap: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(builder: (context) => Category()),
+                                );
+                              },
                               child: Text(
                                 "SEE ALL >",
                                 style: TextStyle(

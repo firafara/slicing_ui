@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:slicing_ui/course/course_list_filter.dart';
 import 'package:slicing_ui/mentor/mentor_list.dart';
 import 'package:slicing_ui/model/model_course.dart';
 import 'package:slicing_ui/widget/widget_course_completed.dart';
@@ -64,7 +65,10 @@ class _CourseListState extends State<CourseList> {
                   prefixIcon: Icon(Icons.search, color: Colors.grey,),
                   suffixIcon: GestureDetector(
                     onTap: () {
-                      _searchController.clear();
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => CourseListFilter()),
+                      );
                     },
                     child: Container(
                       width: 30,
@@ -76,7 +80,7 @@ class _CourseListState extends State<CourseList> {
                         color: Colors.blue,
                       ),
                       child: Icon(
-                        Icons.close,
+                        Icons.filter_alt,
                         color: Colors.white,
                         size: 20,
                       ),

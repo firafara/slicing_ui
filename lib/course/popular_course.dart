@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:slicing_ui/course/course_list.dart';
 import '../model/model_course.dart';
 import '../widget/horizontal_list_popular_course_home.dart';
 import '../widget/widget_course_completed.dart';
@@ -41,7 +42,12 @@ class _PopularCourseState extends State<PopularCourse> {
         actions: [
           IconButton(
             icon: Icon(Icons.search),
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => CourseList()),
+              );
+            },
           ),
         ],
       ),

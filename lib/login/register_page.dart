@@ -133,7 +133,10 @@ class _RegisterPageState extends State<RegisterPage> {
               SizedBox(height: 20),
               InkWell(
                 onTap: () {
-                  // Action when the "Sign In" button is tapped
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => LoginPage()), // Ganti dengan halaman yang sesuai
+                  );
                 },
                 child: Container(
                   height: 60,
