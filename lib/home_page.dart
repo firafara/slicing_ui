@@ -11,6 +11,7 @@ import 'package:slicing_ui/widget/widget_course_home.dart';
 import 'package:slicing_ui/widget/widget_mentor.dart';
 import 'package:slicing_ui/widget/widget_mentor_home.dart';
 
+import 'notification_page.dart';
 import 'widget/widget_course_completed.dart';
 
 class HomePage extends StatefulWidget {
@@ -75,9 +76,16 @@ class _HomePageState extends State<HomePage> {
                                 shape: BoxShape.circle,
                                 border: Border.all(color: Colors.green, width: 2,),
                               ),
-                              child: Icon(
-                                Icons.notifications_outlined,
-                                color: Colors.green,
+                              child: InkWell(
+                                onTap: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(builder: (context) => NotificationPage()),
+                                  );
+                                },
+                                child: Icon(
+                                  Icons.notifications,
+                                ),
                               ),
                             ),
                           ),
