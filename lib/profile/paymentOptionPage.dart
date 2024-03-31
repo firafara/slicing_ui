@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:slicing_ui/security.dart';
+import 'package:slicing_ui/profile/security.dart';
 import 'package:slicing_ui/widget/custom_button.dart';
 
 import 'addNewCardPage.dart';

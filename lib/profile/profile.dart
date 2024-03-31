@@ -1,12 +1,12 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:slicing_ui/edit_profile.dart';
-import 'package:slicing_ui/invitedFriendPage.dart';
-import 'package:slicing_ui/languagePage.dart';
-import 'package:slicing_ui/notification_profile.dart';
-import 'package:slicing_ui/paymentOptionPage.dart';
-import 'package:slicing_ui/security.dart';
-import 'package:slicing_ui/termConditionPage.dart';
+import 'package:slicing_ui/profile/edit_profile.dart';
+import 'package:slicing_ui/profile/invitedFriendPage.dart';
+import 'package:slicing_ui/profile/languagePage.dart';
+import 'package:slicing_ui/profile/notification_profile.dart';
+import 'package:slicing_ui/profile/paymentOptionPage.dart';
+import 'package:slicing_ui/profile/security.dart';
+import 'package:slicing_ui/profile/termConditionPage.dart';
 import 'package:slicing_ui/widget/widget_profile_menu.dart';
 
 // import '../widget/pageBottomBar.dart';

@@ -7,7 +7,7 @@ import '../model/model_course.dart';
 import '../widget/custom_button.dart';
 import '../widget/custom_dialog.dart';
 import '../widget/custom_radiobutton.dart';
-import 'addNewCardPage.dart';
+import '/profile/addNewCardPage.dart';
 
 class PaymentPage extends StatefulWidget {
   final Course course;
@@ -55,7 +55,7 @@ class _PaymentPageState extends State<PaymentPage> {
               ),
               SizedBox(height: 20),
               Text(
-                "Your Account is Ready to Use. You will be redirected to the Home Page in a Few Seconds.",
+                "Your Payment is Successfully. Purchase a New Course",
                 style: TextStyle(fontFamily: 'Mulish'),
                 textAlign: TextAlign.center,
               ),
@@ -67,7 +67,7 @@ class _PaymentPageState extends State<PaymentPage> {
                     MaterialPageRoute(builder: (context) => HomePage()),
                   );
                 },
-                child: Text("Enroll Course - \u0024${course.txtPrice}"),
+                child: Text("E-Receipt"),
               )
             ],
           ),
