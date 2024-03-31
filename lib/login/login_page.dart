@@ -114,8 +114,7 @@ class LoginPage extends StatelessWidget {
                           Navigator.push(
                             context,
                             MaterialPageRoute(builder: (context) => FillProfile()),
-                          );
-                        },
+                          );                        },
                         child: Row(
                           children: [
                             Theme(
@@ -145,6 +144,7 @@ class LoginPage extends StatelessWidget {
                       ),
                     ],
                   ),
+
                   TextButton(
                     onPressed: () {
                       Navigator.push(
