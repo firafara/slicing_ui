@@ -5,9 +5,7 @@ import 'package:slicing_ui/course/course_list_filter.dart';
 import 'package:slicing_ui/course/popular_course.dart';
 import 'package:slicing_ui/home_page.dart';
 import 'package:slicing_ui/login/register_page.dart';
-import 'package:slicing_ui/notification_profile.dart';
 import 'package:slicing_ui/password/forgot_password.dart';
-import 'package:slicing_ui/paymentOptionPage.dart';
 import 'package:slicing_ui/profile/fill_profile_page.dart';
 
 class LoginPage extends StatelessWidget {
@@ -114,7 +112,8 @@ class LoginPage extends StatelessWidget {
                           Navigator.push(
                             context,
                             MaterialPageRoute(builder: (context) => FillProfile()),
-                          );                        },
+                          );
+                        },
                         child: Row(
                           children: [
                             Theme(
@@ -144,7 +143,6 @@ class LoginPage extends StatelessWidget {
                       ),
                     ],
                   ),
-
                   TextButton(
                     onPressed: () {
                       Navigator.push(
@@ -152,7 +150,7 @@ class LoginPage extends StatelessWidget {
                         MaterialPageRoute(
                             builder: (context) =>
                                 ForgotPassword()), // Ganti dengan halaman yang sesuai
-                        );
+                      );
                     },
                     child: Text(
                       'Forgot Password?',
@@ -171,12 +169,12 @@ class LoginPage extends StatelessWidget {
                 onTap: () {
                   Navigator.push(
                     context,
-                        // MaterialPageRoute(
-                        //     builder: (context) => FillProfile()),
-                        // );
-                        MaterialPageRoute(
-                            builder: (context) => HomePage()),
-                      );
+                    // MaterialPageRoute(
+                    //     builder: (context) => FillProfile()),
+                    // );
+                    MaterialPageRoute(
+                        builder: (context) => HomePage()),
+                  );
                 },
                 child: Container(
                   height: 60,
