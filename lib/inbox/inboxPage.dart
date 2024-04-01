@@ -1,29 +1,19 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:slicing_ui/course/course_list.dart';
-import '../inbox/inboxPage.dart';
-import '../model/model_course.dart';
-import '../myCourse/myCoursePage.dart';
-import '../profile/profile.dart';
-import '../transactionPage.dart';
-import '../widget/horizontal_list_popular_course_home.dart';
-import '../widget/widget_course_completed.dart';
+import 'package:slicing_ui/inbox/call.dart';
+import 'package:slicing_ui/inbox/chat.dart';
+import 'package:slicing_ui/myCourse/myCoursePage.dart';
+import 'package:slicing_ui/profile/profile.dart';
+import 'package:slicing_ui/transactionPage.dart';
 
-class PopularCourse extends StatefulWidget {
-  const PopularCourse({Key? key}) : super(key: key);
-
+class InboxPage extends StatefulWidget {
+  const InboxPage({Key? key}) : super(key: key);
   @override
-  State<PopularCourse> createState() => _PopularCourseState();
+  State<InboxPage> createState() => _InboxPageState();
 }
 
-class _PopularCourseState extends State<PopularCourse> {
-  List<String> categories = [
-    '3D Design',
-    'Arts & Humanities',
-    'Graphic Design',
-    'Programmer'
-  ];
-
-  int _selectedIndex = 0;
+class _InboxPageState extends State<InboxPage> with SingleTickerProviderStateMixin {
+  int _selectedIndex = 2;
 
   void _onItemTapped(int index) {
     setState(() {
@@ -66,13 +56,27 @@ class _PopularCourseState extends State<PopularCourse> {
       }
     });
   }
+  late TabController _tabController;
+
+  @override
+  void initState() {
+    super.initState();
+    _tabController = TabController(length: 2, vsync: this);
+  }
+
+  @override
+  void dispose() {
+    _tabController.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Color(0xFFF5F9FF),
         title: Text(
-          'Popular Course',
+          'Inbox',
           style: TextStyle(
             fontFamily: 'Jost',
             fontSize: 21,
@@ -81,39 +85,51 @@ class _PopularCourseState extends State<PopularCourse> {
         ),
         actions: [
           IconButton(
-            icon: Icon(Icons.search),
+            icon: Icon(Icons.search), // Icon search
             onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => CourseList()),
-              );
+              // Aksi yang dilakukan ketika ikon search ditekan
             },
           ),
         ],
       ),
+      backgroundColor: Color(0xFFF5F9FF),
       body: Column(
         children: [
-          SizedBox(height: 10),
-          Expanded(
-            flex: 1,
-            child: HorizontalListPopularCourse(categories: categories),
+          Padding(
+            padding: EdgeInsets.all(16),
+            child: Column(
+              children: [
+                SizedBox(height: 10),
+                TabBar(
+                  controller: _tabController,
+                  labelColor: Colors.white,
+                  unselectedLabelColor: Colors.black,
+                  indicatorSize: TabBarIndicatorSize.tab,
+                  indicator: BoxDecoration(
+                    shape: BoxShape.rectangle,
+                    borderRadius: BorderRadius.all(Radius.circular(30)),
+                    color: Colors.green[700],
+                  ),
+                  dividerColor: Color(0xFFF5F9FF),
+                  tabs: [
+                    Tab(
+                      text: 'Chat',
+                    ),
+                    Tab(
+                      text: 'Call',
+                    ),
+                  ],
+                ),
+              ],
+            ),
           ),
-          SizedBox(height: 10),
           Expanded(
-            flex: 15,
-            child: ListView.builder(
-              scrollDirection: Axis.vertical,
-              itemCount: courses.length,
-              itemBuilder: (BuildContext context, int index) {
-                Course course = courses[index];
-                return WidgetCourseCompleted(
-                  title: course.txtTitle,
-                  rating: course.txtRating,
-                  imagePath: course.urlImage,
-                  subtitle: course.txtCategori,
-                  duration: course.txtDuration,
-                );
-              },
+            child: TabBarView(
+              controller: _tabController,
+              children: [
+                ChatPage(),
+                CallPage(),
+              ],
             ),
           ),
         ],

@@ -1,29 +1,23 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:slicing_ui/course/course_list.dart';
-import '../inbox/inboxPage.dart';
-import '../model/model_course.dart';
-import '../myCourse/myCoursePage.dart';
-import '../profile/profile.dart';
-import '../transactionPage.dart';
-import '../widget/horizontal_list_popular_course_home.dart';
-import '../widget/widget_course_completed.dart';
+import 'package:flutter/widgets.dart';
+import 'package:slicing_ui/inbox/inboxPage.dart';
+import 'package:slicing_ui/model/model_course.dart';
+import 'package:slicing_ui/myCourse/myCourseOngoing.dart';
+import 'package:slicing_ui/myCourse/myCourseCompleted.dart';
+import 'package:slicing_ui/profile/profile.dart';
+import 'package:slicing_ui/transactionPage.dart';
+import 'package:slicing_ui/widget/widget_search.dart';
+import 'package:slicing_ui/widget/widget_course_completed.dart';
 
-class PopularCourse extends StatefulWidget {
-  const PopularCourse({Key? key}) : super(key: key);
-
+class MyCoursePage extends StatefulWidget {
+  const MyCoursePage({Key? key}) : super(key: key);
   @override
-  State<PopularCourse> createState() => _PopularCourseState();
+  State<MyCoursePage> createState() => _MyCoursePageState();
 }
 
-class _PopularCourseState extends State<PopularCourse> {
-  List<String> categories = [
-    '3D Design',
-    'Arts & Humanities',
-    'Graphic Design',
-    'Programmer'
-  ];
-
-  int _selectedIndex = 0;
+class _MyCoursePageState extends State<MyCoursePage> with SingleTickerProviderStateMixin {
+  int _selectedIndex = 1;
 
   void _onItemTapped(int index) {
     setState(() {
@@ -66,54 +60,73 @@ class _PopularCourseState extends State<PopularCourse> {
       }
     });
   }
+  late TabController _tabController;
+
+  @override
+  void initState() {
+    super.initState();
+    _tabController = TabController(length: 2, vsync: this);
+  }
+
+  @override
+  void dispose() {
+    _tabController.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Color(0xFFF5F9FF),
         title: Text(
-          'Popular Course',
+          'My Courses',
           style: TextStyle(
             fontFamily: 'Jost',
             fontSize: 21,
             fontWeight: FontWeight.w600,
           ),
         ),
-        actions: [
-          IconButton(
-            icon: Icon(Icons.search),
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => CourseList()),
-              );
-            },
-          ),
-        ],
       ),
+      backgroundColor: Color(0xFFF5F9FF),
       body: Column(
         children: [
-          SizedBox(height: 10),
-          Expanded(
-            flex: 1,
-            child: HorizontalListPopularCourse(categories: categories),
+          Padding(
+            padding: EdgeInsets.all(16),
+            child: Column(
+              children: [
+                SearchOnly(hintText: "Search For..."),
+                SizedBox(height: 10,),
+                TabBar(
+                  controller: _tabController,
+                  labelColor: Colors.white,
+                  unselectedLabelColor: Colors.black,
+                  indicatorSize: TabBarIndicatorSize.tab,
+                  indicator: BoxDecoration(
+                    shape: BoxShape.rectangle,
+                    borderRadius: BorderRadius.all(Radius.circular(30)),
+                    color: Colors.green[700],
+                  ),
+                  dividerColor: Color(0xFFF5F9FF),
+                  tabs: [
+                    Tab(
+                      text: 'Completed',
+                    ),
+                    Tab(
+                      text: 'Ongoing',
+                    ),
+                  ],
+                ),
+              ],
+            ),
           ),
-          SizedBox(height: 10),
           Expanded(
-            flex: 15,
-            child: ListView.builder(
-              scrollDirection: Axis.vertical,
-              itemCount: courses.length,
-              itemBuilder: (BuildContext context, int index) {
-                Course course = courses[index];
-                return WidgetCourseCompleted(
-                  title: course.txtTitle,
-                  rating: course.txtRating,
-                  imagePath: course.urlImage,
-                  subtitle: course.txtCategori,
-                  duration: course.txtDuration,
-                );
-              },
+            child: TabBarView(
+              controller: _tabController,
+              children: [
+                MyCourseCompleted(),
+                MyCourseOngoing(),
+              ],
             ),
           ),
         ],
