@@ -8,8 +8,6 @@ import 'package:slicing_ui/home_page.dart';
 import 'package:slicing_ui/intro02_page.dart';
 import 'package:slicing_ui/mentor/top_mentor.dart';
 import 'package:slicing_ui/model/model_course.dart';
-import 'package:slicing_ui/notification_profile.dart';
-import 'package:slicing_ui/paymentOptionPage.dart';
 
 class Intro01 extends StatelessWidget {
   const Intro01({super.key});
