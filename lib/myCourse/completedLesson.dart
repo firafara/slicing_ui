@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:slicing_ui/course/detail_course_curriculum.dart';
+import 'package:slicing_ui/myCourse/ongoingLesson.dart';
 import 'package:slicing_ui/myCourse/sertifikat.dart';
 import 'package:slicing_ui/myCourse/vidioPlay.dart';
 import 'package:slicing_ui/widget/custom_button.dart';
@@ -100,7 +101,7 @@ class _CompletedLessonState extends State<CompletedLesson>
                                   onTap: (){
                                     Navigator.push(context, MaterialPageRoute(builder: (context) => VideoPlay()));
                                   },
-                                  child: WidgetCurriculcumItem(
+                                  child: WidgetCurriculumItem(
                                     number: curriculcum.number,
                                     title: curriculcum.title,
                                     time: curriculcum.time,
@@ -139,7 +140,7 @@ class _CompletedLessonState extends State<CompletedLesson>
                               itemCount: sampleData.length,
                               itemBuilder: (BuildContext context, int index) {
                                 CurriculumItem curriculcum = sampleData[index];
-                                return WidgetCurriculcumItem(
+                                return WidgetCurriculumItem(
                                   number: curriculcum.number,
                                   title: curriculcum.title,
                                   time: curriculcum.time,
@@ -175,13 +176,17 @@ class _CompletedLessonState extends State<CompletedLesson>
                             color: Colors.white70,
                             border: Border.all(color: Colors.grey)
                         ),
-                        padding: EdgeInsets.symmetric(vertical: 12, horizontal: 20),
-                        child: Image.asset('images/IcSertif.png', height:20,),
+                        padding: EdgeInsets.symmetric(vertical: 20, horizontal: 50),
+                        child: Image.asset('images/ic_sertif.png', height:20,),
                       ),
                     ),
                     SizedBox(width: 10,),
                     ElevatedButton(
-                      onPressed: (){},
+                      onPressed: (){ 
+                        Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => OngoingLesson()),
+                        );
+                      },
                       style: ElevatedButton.styleFrom(
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(30.0),

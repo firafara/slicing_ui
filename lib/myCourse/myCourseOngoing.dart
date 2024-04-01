@@ -54,7 +54,7 @@ class _MyCourseOngoingState extends State<MyCourseOngoing> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Image.asset(
-                imagePath,
+                'images/course.png',
                 width: 130, // Set lebar gambar
                 height: double.infinity, // Set tinggi gambar ke tinggi maksimum
                 fit: BoxFit.fill, // Mengisi gambar ke seluruh ruang yang tersedia

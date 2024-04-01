@@ -88,6 +88,26 @@ flutter:
    - assets/images/blankuser.png
    - assets/images/wiliam.png
    - assets/images/homeCourse.png
+   - assets/images/call.png
+   - assets/images/certificate.png
+   - assets/images/card.png
+   - assets/images/dokumen.png
+   - assets/images/end.png
+   - assets/images/completed_course.png
+   - assets/images/certificate.png
+   - assets/images/ic_sertif.png
+   - assets/images/ic_video.png
+   - assets/images/VIDEO.png
+   - assets/images/VOICE.png
+   - assets/images/receipt.png
+   - assets/images/notif1.png
+   - assets/images/notif2.png
+   - assets/images/notif3.png
+   - assets/images/notif4.png
+   - assets/images/notif5.png
+   - assets/images/profile.png
+   - assets/images/voice_note.png
+
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

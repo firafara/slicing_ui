@@ -43,7 +43,7 @@ class MessageColumn extends StatelessWidget {
                 ),
                 child: Center(
                   child: Image.asset(
-                    'images/voice note.png', // Ganti dengan path gambar Anda
+                    'images/voice_note.png', // Ganti dengan path gambar Anda
                     width: 32.0,
                     height: 32.0,
                     // fit: BoxFit.cover,

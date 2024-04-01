@@ -22,7 +22,7 @@ class Inbox {
 // Contoh data
 List<Inbox> inboxs = [
   Inbox(
-      urlImage: 'assets/images/imageprofile.png',
+      urlImage: 'assets/images/profile.png',
       txtName: 'Virginia M. Patterson',
       txtMessage: 'Hi, Good Evening Bro.!',
       txtChat: '03',
@@ -31,7 +31,7 @@ List<Inbox> inboxs = [
       txtTanggal: 'Nov 03, 202X'
   ),
   Inbox(
-      urlImage: 'assets/images/imageprofile.png',
+      urlImage: 'assets/images/profile.png',
       txtName: 'Jonathon K. Nix',
       txtMessage: 'I Just Finished It.!',
       txtChat: '08',
@@ -40,7 +40,7 @@ List<Inbox> inboxs = [
       txtTanggal: 'Nov 05, 202X'
   ),
   Inbox(
-      urlImage: 'assets/images/imageprofile.png',
+      urlImage: 'assets/images/profile.png',
       txtName: 'Duncan E. Hoffman',
       txtMessage: 'How are you?',
       txtChat: '05',
@@ -49,7 +49,7 @@ List<Inbox> inboxs = [
       txtTanggal: 'Nov 06, 202X'
   ),
   Inbox(
-      urlImage: 'assets/images/imageprofile.png',
+      urlImage: 'assets/images/profile.png',
       txtName: 'Roy R. McCraney',
       txtMessage: 'OMG, This is Amazing..',
       txtChat: '07',
@@ -58,7 +58,7 @@ List<Inbox> inboxs = [
       txtTanggal: 'Nov 15, 202X'
   ),
   Inbox(
-      urlImage: 'assets/images/imageprofile.png',
+      urlImage: 'assets/images/profile.png',
       txtName: 'Janice R. Norris',
       txtMessage: 'Wow, This is Really Epic',
       txtChat: '02',

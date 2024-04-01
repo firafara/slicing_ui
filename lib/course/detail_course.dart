@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:slicing_ui/model/model_course.dart';
 import 'package:slicing_ui/model/model_mentor.dart';
 import 'package:slicing_ui/notification_page.dart';
+import 'package:slicing_ui/payment/paymentPage.dart';
 import 'package:slicing_ui/widget/ReviewWidget.dart';
 import 'package:slicing_ui/widget/widget_mentor.dart';
 import 'package:slicing_ui/widget/widget_section.dart';
@@ -208,7 +209,7 @@ class _DetailCourseState extends State<DetailCourse> with SingleTickerProviderSt
                   onTap: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => NotificationPage()),
+                      MaterialPageRoute(builder: (context) => PaymentPage(course: course,)),
                     );                  },
                   child: Container(
                     height: 60,

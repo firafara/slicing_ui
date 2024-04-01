@@ -42,8 +42,8 @@ class Messages extends StatelessWidget {
             time: '15:29',
           ),
           SendImage(
-            imagePath1: 'assets/images/image send.png',
-            imagePath2: 'assets/images/image send.png',
+            imagePath1: 'assets/images/image_send.png',
+            imagePath2: 'assets/images/image_send.png',
             time: '15:52',
           ),
           SentBubble(

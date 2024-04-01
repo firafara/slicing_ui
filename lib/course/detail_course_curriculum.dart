@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:slicing_ui/model/model_course.dart';
-import 'package:slicing_ui/notification_page.dart';
+import 'package:slicing_ui/payment/paymentPage.dart';
 import 'package:slicing_ui/widget/widget_section.dart';
 
 class DetailCourseCurriculum extends StatefulWidget {
@@ -15,6 +15,7 @@ class DetailCourseCurriculum extends StatefulWidget {
 
 class _DetailCourseCurriculumState extends State<DetailCourseCurriculum> with SingleTickerProviderStateMixin{
   late TabController _tabController;
+  late Course course;
 
   @override
   void initState() {
@@ -26,6 +27,7 @@ class _DetailCourseCurriculumState extends State<DetailCourseCurriculum> with Si
   void dispose() {
     _tabController.dispose();
     super.dispose();
+    course = widget.course;
   }
 
   Widget build(BuildContext context) {
@@ -193,58 +195,7 @@ class _DetailCourseCurriculumState extends State<DetailCourseCurriculum> with Si
                 ],
               ),
               SizedBox(height: 24), // Space below the TabBarView
-              Padding(
-                padding: EdgeInsets.symmetric(horizontal: 25),
-                child: GestureDetector(
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => NotificationPage()),
-                    );                  },
-                  child: Container(
-                    height: 60,
-                    decoration: BoxDecoration(
-                      color: Color(0xFF0961F5),
-                      borderRadius: BorderRadius.circular(30),
-                    ),
-                    child: Stack(
-                      alignment: Alignment.center,
-                      children: <Widget>[
-                        Align(
-                          alignment: Alignment.center,
-                          child: Text(
-                            'Enroll Course',
-                            textAlign: TextAlign.center, // Center text
-                            style: TextStyle(
-                              fontSize: 16,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.white,
-                              fontFamily: 'Jost',
-                            ),
-                          ),
-                        ),
-                        Positioned(
-                          right: 16,
-                          child: Container(
-                            decoration: BoxDecoration(
-                              shape: BoxShape.circle,
-                              color: Colors.white,
-                            ),
-                            child: Padding(
-                              padding: const EdgeInsets.all(10),
-                              child: Icon(
-                                Icons.arrow_forward,
-                                color: Color(0xFF0961F5),
-                                size: 24,
-                              ),
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-              ),
+              
               SizedBox(height: 30), // Space below the TabBarView
 
             ],

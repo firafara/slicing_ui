@@ -2,12 +2,12 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
-class WidgetCurriculcumItem extends StatelessWidget {
+class WidgetCurriculumItem extends StatelessWidget {
   final String number;
   final String title;
   final String time;
 
-  const WidgetCurriculcumItem({
+  const WidgetCurriculumItem({
     required this.number,
     required this.title,
     required this.time,
