@@ -23,11 +23,11 @@ class WidgetTransaction extends StatelessWidget {
             children: [
               ClipRRect(
                 borderRadius: BorderRadius.all(Radius.circular(15)),
-                child: Image.network(
-                  urlImage,
+                child: Image.asset(
+                  'images/course.png', // Lokasi gambar di direktori assets
                   fit: BoxFit.cover,
-                  height: 80,
-                  width: 80,
+                  height: 100,
+                  width: 100,
                 ),
               ),
               SizedBox(width: 10,),

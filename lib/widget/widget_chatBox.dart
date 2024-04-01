@@ -30,7 +30,7 @@ class MessageColumn extends StatelessWidget {
               ),
               SizedBox(width: 8.0), // Spacer
               Image.asset(
-                'assets/images/dokumen.png', // Ganti dengan path gambar Anda
+                'images/dokumen.png', // Ganti dengan path gambar Anda
                 width: 32.0,
                 height: 32.0,
               ),
@@ -43,7 +43,7 @@ class MessageColumn extends StatelessWidget {
                 ),
                 child: Center(
                   child: Image.asset(
-                    'assets/images/voice note.png', // Ganti dengan path gambar Anda
+                    'images/voice note.png', // Ganti dengan path gambar Anda
                     width: 32.0,
                     height: 32.0,
                     // fit: BoxFit.cover,

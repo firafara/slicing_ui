@@ -48,8 +48,8 @@ class WidgetCourseOngoing extends StatelessWidget {
                 children: [
                   ClipRRect(
                     borderRadius: BorderRadius.all(Radius.circular(15)),
-                    child: Image.network(
-                      imagePath,
+                    child: Image.asset(
+                      'images/course.png', // Lokasi gambar di direktori assets
                       fit: BoxFit.cover,
                       height: 100,
                       width: 100,
