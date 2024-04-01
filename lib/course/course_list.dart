@@ -135,8 +135,10 @@ class _CourseListState extends State<CourseList> {
                   Course course = courses[index];
                   return WidgetCourseCompleted(
                     title: course.txtTitle,
+                    rating: course.txtRating,
                     imagePath: course.urlImage,
                     subtitle: course.txtCategori,
+                    duration: course.txtDuration,
                   );
                 },
               ),

@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:slicing_ui/model/model_course.dart';
 import 'package:slicing_ui/notification_page.dart';
