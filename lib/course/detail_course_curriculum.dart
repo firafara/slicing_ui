@@ -33,6 +33,15 @@ class _DetailCourseCurriculumState extends State<DetailCourseCurriculum> with Si
   Widget build(BuildContext context) {
     final Course course = widget.course;
     return Scaffold(
+      appBar: AppBar(
+        title: Text('Detail Course'),
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back),
+          onPressed: () {
+            Navigator.pop(context);
+          },
+        ),
+      ),
       body: SingleChildScrollView(
         child: Container(
           color: Color(0xFFDEEEE6),
